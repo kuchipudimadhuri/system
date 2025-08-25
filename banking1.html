@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apna Bank App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+    }
+
+    /* Top Navbar */
+    .topbar {
+      background-color: #4a148c;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topbar h1 {
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .topbar .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    /* Banner Image */
+    .banner {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .banner img {
+      max-width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Horizontal Cards Section */
+    .card-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px 10px;
+      gap: 20px;
+    }
+
+    .card {
+      flex: 1 1 250px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background: #4a148c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .card:nth-child(1) { background: #e3f2fd; }
+    .card:nth-child(2) { background: #e8f5e9; }
+    .card:nth-child(3) { background: #fff3e0; }
+    .card:nth-child(4) { background: #fce4ec; }
+    .card:nth-child(5) { background: #ede7f6; }
+    .card:nth-child(6) { background: #e0f7fa; }
+
+    /* Bottom Navigation */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #eeeeee;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .bottom-nav div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 14px;
+      color: #4a148c;
+      font-weight: bold;
+    }
+
+    .bottom-nav i {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .card-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <div class="topbar">
+    <h1>Apna Bank</h1>
+    <div class="nav">
+      <a href="#">Sign Up</a>
+      <a href="#">Login</a>
+    </div>
+  </div>
+
+  <!-- Center Image of Bank -->
+  <div class="banner">
+    <img src="bank.jpg" alt="Apna Bank Logo" />
+  </div>
+
+  <!-- Action Cards (Horizontal Layout) -->
+  <div class="card-row">
+    <div class="card">
+      <h3>Check Balance</h3>
+      <button class="btn" onclick="alert('Your balance is ₹25,000')">View</button>
+    </div>
+    <div class="card">
+      <h3>Transfer Money</h3>
+      <button class="btn" onclick="alert('Redirecting to Transfer...')">View</button>
+    </div>
+    <div class="card">
+      <h3>Transaction History</h3>
+      <button class="btn" onclick="alert('Showing Transactions...')">View</button>
+    </div>
+    <div class="card">
+      <h3>Loans</h3>
+      <button class="btn" onclick="alert('Loan options coming soon!')">View</button>
+    </div>
+    <div class="card">
+      <h3>Credit/Debit Cards</h3>
+      <button class="btn" onclick="alert('Card details loading...')">View</button>
+    </div>
+    <div class="card">
+      <h3>Deposits</h3>
+      <button class="btn" onclick="alert('Check your deposits')">View</button>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <div>
+      <i>🏠</i>
+      <span>Home</span>
+    </div>
+    <div>
+      <i>💸</i>
+      <span>Transfer</span>
+    </div>
+    <div>
+      <i>👤</i>
+      <span>Profile</span>
+    </div>
+  </div>
+
+</body>
+</html>
